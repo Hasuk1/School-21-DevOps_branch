@@ -3,7 +3,7 @@ Installing and upgrading a Linux system. Administration basics.
 
 ## Contents
 
-1. [Part 1]
+1. [[Part-1]]
 2. 
 
 # Part 1
