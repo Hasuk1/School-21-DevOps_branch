@@ -288,7 +288,7 @@ $ systemctl status ssh
 $ sudo vim /etc/ssh/sshd_config
 ```
 
-![ssh_reconf](misc/part8.2_ssh_reconf.png)
+![ssh_reconf](misc/part8.2.01_ssh_reconf.png)
 
 ```c
 $ systemctl restart sshd
