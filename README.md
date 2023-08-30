@@ -1,7 +1,7 @@
 # **DevOps Branch**
 
-Tasks in the DevOps branch of School 21.
-
+*Tasks in the DevOps branch of School 21.*
+![linux_network](Linux/misc/linux_network.png)
 |**Project**| **Status**|
 | ------ | ------ |
 | `DO1` [Linux](https://github.com/Hasuk1/School-21-DevOps_branch/tree/main/Linux)|300 XP, 100% |
