@@ -49,7 +49,7 @@
 
 7. [NAT](#part-7-nat)
 
-8. [Знакомство с SSH Tunnels](#part-8-дополнительно-знакомство-с-ssh-tunnels)
+8. [Знакомство с SSH Tunnels](#part-8-знакомство-с-ssh-tunnels)
 
 ## **Part 1. Инструмент ipcalc**
 
