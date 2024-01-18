@@ -1,0 +1,47 @@
+stages:
+  - build
+  - style
+  - test
+  - deploy
+
+build:
+  stage: build
+  script:
+    - cd src/SimpleBashUtils/cat/
+    - make
+    - cd ../grep/
+    - make
+  after_script:
+    - bash src/bot.sh "build"
+  artifacts:
+    paths:
+    - src/SimpleBashUtils/cat/s21_cat
+    - src/SimpleBashUtils/grep/s21_grep
+    expire_in: 30 days
+
+style:
+  stage: style
+  script:
+    - clang-format -n -Werror src/SimpleBashUtils/cat/*.c src/SimpleBashUtils/cat/*.h src/SimpleBashUtils/grep/*.c src/SimpleBashUtils/grep/*.h
+  after_script:
+    - bash src/bot.sh "style"
+
+test:
+  stage: test
+  script:
+    - cd src/SimpleBashUtils/cat/
+    - bash cat_test.sh
+    - cd ../grep/
+    - bash grep_test.sh
+  after_script:
+    - bash src/bot.sh "test"
+
+deploy:
+  stage: deploy
+  script:
+    - cd src/
+    - chmod +x deploy.sh
+    - bash deploy.sh
+  when: manual
+  after_script:
+    - bash src/bot.sh "deploy"
